@@ -22,7 +22,7 @@ jobs:
       - name: Install Playwright Browsers
         run: yarn playwright install --with-deps chromium
       - name: Run Playwright tests
-        run: SERVER_FILE=servers-${{ inputs.environment }}.json yarn playwright test
+        run: SERVER_FILE=servers-${{ inputs.environment }}.json yarn playwright test --project=chromium
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
