@@ -10,6 +10,8 @@ jobs:
     # https://playwright.dev/docs/docker
     # container:
     #   image: mcr.microsoft.com/playwright:v1.49.0-noble
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
